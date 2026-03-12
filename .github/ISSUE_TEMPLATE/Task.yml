@@ -1,0 +1,139 @@
+name: Test Form (All Components)
+description: Template demonstrating all GitHub Issue Form components
+title: "[Test]: "
+labels: ["triage"]
+assignees: []
+
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Test Issue Form
+        This template demonstrates all supported GitHub Issue Form inputs.
+
+        Fill in anything — this is only for testing.
+
+  - type: input
+    id: short_text
+    attributes:
+      label: Short text input
+      description: Single-line input field
+      placeholder: Example value
+    validations:
+      required: true
+
+  - type: textarea
+    id: long_text
+    attributes:
+      label: Long text input
+      description: Multi-line text area
+      placeholder: |
+        Example:
+        1. Step one
+        2. Step two
+        3. Step three
+      render: markdown
+
+  - type: dropdown
+    id: dropdown_single
+    attributes:
+      label: Dropdown (single select)
+      description: Choose one option
+      options:
+        - Option A
+        - Option B
+        - Option C
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dropdown_multi
+    attributes:
+      label: Dropdown (multi-select)
+      description: Select multiple values
+      multiple: true
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Other
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist example
+      description: Typical confirmation checklist
+      options:
+        - label: I searched existing issues
+          required: true
+        - label: I read the documentation
+        - label: I included logs if applicable
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Software version
+      placeholder: v1.0.0
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Environment or runtime info
+      placeholder: Node 20 / Ubuntu / Docker
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Describe how to reproduce the issue
+      placeholder: |
+        1. Run command
+        2. Click button
+        3. Observe error
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+      description: What should happen?
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or output
+      description: Paste logs here
+      render: shell
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Example configuration
+      description: Paste config if relevant
+      render: yaml
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / attachments
+      description: Drag and drop screenshots if useful
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (example)
+      description: Demonstration only
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### End of form
+        Submitting this will create a Markdown issue with all answers.
