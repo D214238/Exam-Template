@@ -1,4 +1,4 @@
-name: Sync Issue State with Project Column
+name: Sync Issue State with Done Column
 
 on:
   project_card:
